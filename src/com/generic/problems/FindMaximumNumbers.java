@@ -1,7 +1,9 @@
 package com.generic.problems;
 
+import java.util.Arrays;
+
 public class FindMaximumNumbers <T extends Comparable<T>>{
-	
+	//int [] sortElements ; 
 	// using method to find max value
 	public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
 	    T max = x; 
@@ -24,7 +26,13 @@ public class FindMaximumNumbers <T extends Comparable<T>>{
 		      max = z; 
 		    System.out.println("Maximum value is :" +max);
 	}
-	
+
+	//sort a numbers
+	public void sort( int [] sortElements) {
+		Arrays.sort(sortElements);
+		System.out.println(Arrays.toString(sortElements));
+	}
+
 	// using constructor find max value
 	FindMaximumNumbers(T x, T y, T z){
 		testMax(x, y, z);
@@ -37,5 +45,6 @@ public class FindMaximumNumbers <T extends Comparable<T>>{
 	    System.out.printf("Maximum of %s, %s and %s is %s\n", "Apple", "Peach", "Banana", maximum(
 	        "Apple", "Peach", "Banana"));
 	    FindMaximumNumbers findMaximumNumbers = new FindMaximumNumbers(10,20,30);
+	    findMaximumNumbers.sort(new int [] {15,2,3});
 	  }
 	}
