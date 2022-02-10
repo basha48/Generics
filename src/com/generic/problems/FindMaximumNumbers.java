@@ -3,7 +3,6 @@ package com.generic.problems;
 import java.util.Arrays;
 
 public class FindMaximumNumbers <T extends Comparable<T>>{
-	//int [] sortElements ; 
 	// using method to find max value
 	public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
 	    T max = x; 
